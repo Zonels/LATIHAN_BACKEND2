@@ -1,7 +1,12 @@
 import { Sequelize } from "sequelize";
 import mysql from "mysql2";
-const db = new Sequelize("web_lanjut", "avnadmin", "AVNS_snLs5suqA5X2bEuut2-", {
-  host: "mysql-1c2b2c05-latihan.h.aivencloud.com",
+const dbname= process.env.DBNAME;
+const username= process.env.USERNAME;
+const password= process.env.PASSWORD;
+const host= process.env.host;
+
+const db = new Sequelize(dbname, username , password, {
+  host: host,
   dialect: "mysql",
   port: 25151,
   dialectOptions: { ssl: { rejectUnauthorized: false } },
