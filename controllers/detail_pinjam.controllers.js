@@ -5,7 +5,7 @@ import { Pinjam, DetailPinjam, Buku } from "../index/model.js";
 export const getAllDetailPinjam=async (req, res)=>{
     try {
         const data= await DetailPinjam.findAll({
-            include: { model: Bukus},
+            include: { model: Buku},
         });
         res.json(data);
     } catch (error) {

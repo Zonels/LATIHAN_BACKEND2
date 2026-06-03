@@ -29,9 +29,7 @@ const db = new Sequelize(dbname, username, password, {
 
 export default db;
 
-// (async () =>{
-//     await db.sync();
-// })();
+
 
 
 
