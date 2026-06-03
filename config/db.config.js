@@ -1,17 +1,16 @@
 import { Sequelize } from "sequelize";
 import mysql from "mysql2";
 const dbname= process.env.DBNAME;
-const username= process.env.USERNAME;
-const password= process.env.PASSWORD;
-const host= process.env.host;
+const username= process.env.DBUSERNAME;
+const password= process.env.DBPASSWORD;
+const host= process.env.DBhost;
 
 console.log(dbname)
 
-const db = new Sequelize(dbname, username , password, {
+const db = new Sequelize(`mysql://${username}:${password}@${host}:25151/defaultdb?ssl-mode=REQUIRED`,{
   host: host,
   dialect: "mysql",
   dialectModule: mysql,
-  dialectOptions: { ssl: { rejectUnauthorized: false } },
   define: { timestamps: false },
 });
 export default db;
