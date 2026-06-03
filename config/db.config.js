@@ -5,6 +5,8 @@ const username= process.env.USERNAME;
 const password= process.env.PASSWORD;
 const host= process.env.host;
 
+console.log(dbname)
+
 const db = new Sequelize(dbname, username , password, {
   host: host,
   dialect: "mysql",
@@ -14,9 +16,9 @@ const db = new Sequelize(dbname, username , password, {
 });
 export default db;
 
-(async () =>{
-    await db.sync();
-})();
+// (async () =>{
+//     await db.sync();
+// })();
 
 
 

@@ -1,9 +1,7 @@
+import "dotenv/config";
 import express from "express";
 import db from "./config/db.config.js";
 import cors from "cors";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 import bukuRoute from "./routes/buku.routes.js";
 import mahasiswas from "./routes/mahasiswa.routes.js";
