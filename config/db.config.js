@@ -9,7 +9,6 @@ const db = new Sequelize(dbname, username , password, {
   host: host,
   dialect: "mysql",
   dialectModule: mysql,
-  port: 25151,
   dialectOptions: { ssl: { rejectUnauthorized: false } },
   define: { timestamps: false },
 });
