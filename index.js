@@ -15,6 +15,10 @@ const app = express();
 try {
  await db.authenticate();
  console.log("Database terhubung");
+
+await db.sync();
+console.log('database synce');
+
 } catch(error){
  console.log(error);
 }
