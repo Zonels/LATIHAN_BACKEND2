@@ -7,7 +7,7 @@ const host= process.env.DBhost;
 
 console.log(dbname)
 
-const db = new Sequelize(`mysql://${username}:${password}@${host}:25151/defaultdb`,{
+const db = new Sequelize(`mysql://${username}:${password}@${host}:25151/web_lanjut`,{
   host: host,
   dialect: "mysql",
   dialectModule: mysql,
