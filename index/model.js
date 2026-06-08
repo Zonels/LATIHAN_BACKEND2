@@ -6,9 +6,9 @@ import Mahasiswas from "../models/mahasiswa.model.js";
 /*relasi antara mahasiswa dengan tabel pinjam, agar ketika seleksi pada
  tabel pinjam yang muncul tidak hanya nim, tapi juga nama
  */
-Mahasiswas.hasMany(Pinjam, {  foreignKey: "nim",as: "pinjams",});
+Mahasiswas.hasMany(Pinjam, {  foreignKey: "nim"});
 
-Pinjam.belongsTo(Mahasiswas, {  foreignKey: "nim",  as: "mahasiswa",});
+Pinjam.belongsTo(Mahasiswas, {  foreignKey: "nim"});
 
 /*relasi antara Buku dengan tabel DetilPinjam, agar ketika seleksi pada
  tabel DetilPinjam yang muncul tidak hanya buku_id, tapi juga nama_bukunya
