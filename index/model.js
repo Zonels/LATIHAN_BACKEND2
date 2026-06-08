@@ -22,7 +22,7 @@ DetailPinjam.belongsTo(Buku, { foreignKey: "buku_id" });
 melakukan save
  peminjaman buku kita tinggal panggil model DetilPinjam
  */
-Pinjam.hasMany(DetailPinjam, { foreignKey: "pinjam_id", as: "detail_pinjams" });
+Pinjam.hasMany(DetailPinjam, { foreignKey: "pinjam_id" });
 DetailPinjam.belongsTo(Pinjam, { foreignKey: "pinjam_id" });
 
 export { Buku, Pinjam, DetailPinjam, Mahasiswas };
