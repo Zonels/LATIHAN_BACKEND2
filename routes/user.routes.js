@@ -5,6 +5,6 @@ const routerUser = express.Router();
 routerUser.post("/", tambahuser);
 routerUser.post("/login", login);
 routerUser.get("/dashboard", authenticateToken, (req, res) => {
-  res.send("Welcome to the dashboard!");
+  res.send("Welcome to the dashboard! Anda bisa merubah sesuka hati kalian");
 });
 export default routerUser;
