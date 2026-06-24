@@ -20,14 +20,14 @@ const router = express.Router();
 
 router.get("/", getAllPinjam);
 router.get("/nim/:nim", cariPinjamByNim);
-router.post("/",authenticateToken, insertPinjam);
+router.post("/", insertPinjam);
 router.patch("/:id", updatePinjam);
 router.delete("/:id", deletePinjam);
 // router.patch("/kembali-semua/:id", pengembalianSemua);
 // router.patch("/kembali-satu/:id", pengembalianSatu);
-router.get("/laporan-pengembalian",authenticateToken , laporanPengembalian);
-router.get("/dipinjam/:nim",authenticateToken ,cariBukuDipinjam);
-router.post("/pengembalian",authenticateToken ,pengembalianBuku);
+router.get("/laporan-pengembalian" , laporanPengembalian);
+router.get("/dipinjam/:nim" ,cariBukuDipinjam);
+router.post("/pengembalian" ,pengembalianBuku);
 
 
 export default router;
