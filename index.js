@@ -34,7 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use('/api/user', user);
-app.use('authenticateToken');
+app.use(authenticateToken);
 app.use('/api/buku', bukuRoute);
 app.use('/api/siswa', mahasiswas);
 app.use('/api/prodi', prodis);
