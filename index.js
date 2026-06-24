@@ -15,7 +15,7 @@ import prodis from "./routes/prodi.routes.js";
 import pinjam from "./routes/pinjams.routes.js";
 import detail_pinjam from "./routes/detail_pinjam.routes.js";
 import user from "./routes/user.routes.js";
-import { authenticateToken } from "../middleware/VerifyTokens.js";
+import { authenticateToken } from "./middleware/VerifyTokens.js";
 
 const app = express();
 
