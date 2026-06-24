@@ -5,7 +5,7 @@ import Prodis from "../models/prodi.model.js";
 export const getAllMahasiswa=async (req, res)=>{
     try {
         const mahasiswas = await Mahasiswas.findAll({
-            include: { model: Prodis,attributes: ['nama_prodi'] },
+            //include: { model: Prodis,attributes: ['nama_prodi'] },
         });
         res.json(mahasiswas);
     } catch (error) {
